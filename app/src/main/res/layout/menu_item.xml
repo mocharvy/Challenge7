@@ -1,0 +1,35 @@
+<!-- res/layout/menu_item.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Gambar makanan -->
+    <ImageView
+        android:id="@+id/imgMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Nama makanan -->
+    <TextView
+        android:id="@+id/txtNamaMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Makanan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Harga makanan -->
+    <TextView
+        android:id="@+id/txtTotalMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rp__20_000"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>

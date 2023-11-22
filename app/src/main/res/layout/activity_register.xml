@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/tvUsername1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textSize="16sp"
+        android:textColor="@color/Pink"
+        android:paddingTop="100dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etUsernameValue1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/username1"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F1F1F1"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tvPassword1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textSize="16sp"
+        android:textColor="@color/Pink"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/etUsernameValue1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/etPasswordValue1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/password1"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPassword1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F1F1F1"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvEmail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="16sp"
+        android:textColor="@color/Pink"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/etPasswordValue1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/etEmailValue1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/email1"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F1F1F1"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/tvMobile1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_telp"
+        android:textSize="16sp"
+        android:textColor="@color/Pink"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/etEmailValue1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/etMobileValue1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/no_telp1"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMobile1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F1F1F1"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/registerButton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/register"
+        android:backgroundTint="@color/Pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etMobileValue1" />
+
+    <TextView
+        android:id="@+id/registerText1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/sudah_punya_akun_masuk"
+        android:textColor="@color/LightBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerButton1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

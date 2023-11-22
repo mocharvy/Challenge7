@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "765125535121",
+    "firebase_url": "https://challenge5-ma-default-rtdb.firebaseio.com",
+    "project_id": "challenge5-ma",
+    "storage_bucket": "challenge5-ma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765125535121:android:854fc17fa994838437e630",
+        "android_client_info": {
+          "package_name": "com.programmer.challenge5_ma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxsWwzj2CB7QK80zd-7i8WmSjZY991ga0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765125535121:android:0d25a2b20d46306237e630",
+        "android_client_info": {
+          "package_name": "com.programmer.challenge6_ma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxsWwzj2CB7QK80zd-7i8WmSjZY991ga0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765125535121:android:5a0752ed06c689f037e630",
+        "android_client_info": {
+          "package_name": "com.programmer.challenge7_ma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxsWwzj2CB7QK80zd-7i8WmSjZY991ga0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
