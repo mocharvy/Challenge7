@@ -4,9 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.programmer.challenge7_ma.databinding.LoginActivityBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.programmer.challenge7_ma.databinding.LoginActivityBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: LoginActivityBinding
@@ -26,8 +30,8 @@ class LoginActivity : AppCompatActivity() {
             val username = binding.usernameEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString()
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Isi username dan password", Toast.LENGTH_SHORT).show()
+            if (!Utils.isValidUsername(username) || password.isEmpty()) {
+                Toast.makeText(this, "Input tidak valid", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 

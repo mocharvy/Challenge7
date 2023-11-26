@@ -28,21 +28,26 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
-    buildFeatures {
-        viewBinding = true
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("demo") {
+            versionNameSuffix = ".demo"
+            buildConfigField("String", "BASE_URL", "\"https://testing.jasa-nikah-siri-amanah-profesional.com\"")
+        }
+        create("full") {
+            versionNameSuffix = ".full"
+            buildConfigField("String", "BASE_URL", "\"https://testing.jasa-nikah-siri-amanah-profesional.com\"")
+        }
     }
 
-    //    lint{
-////        disable 'TypographyFractions', 'TypographyQuotes'
-////        enable 'RtlHardcoded', 'RtlCompat', 'RtlEnabled'
-////        checkOnly  'NewApi', 'InlinedApi'
-//        quiet = true
-//        abortOnError = false
-//        ignoreWarnings = true
-//        checkDependencies = true
-//    }
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
 
 
     compileOptions {
@@ -86,9 +91,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation("io.insert-koin:koin-core:3.5.0")
     implementation("io.insert-koin:koin-android:3.5.0")
-    implementation("io.insert-koin:koin-android-compat:3.5.0")
-    implementation("io.insert-koin:koin-androidx-workmanager:3.5.0")
-    implementation("io.insert-koin:koin-androidx-navigation:3.5.0")
 }
+

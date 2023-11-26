@@ -4,9 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.programmer.challenge7_ma.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.programmer.challenge7_ma.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -27,8 +30,10 @@ class RegisterActivity : AppCompatActivity() {
             val password = binding.etPasswordValue1.text.toString()
 
             // Validasi input
-            if (username.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Semua kolom harus di isi!!", Toast.LENGTH_SHORT).show()
+            if (!Utils.isValidUsername(username) || !Utils.isValidEmail(email) ||
+                !Utils.isValidPhoneNumber(phone) || !Utils.isValidPassword(password)
+            ) {
+                Toast.makeText(this, "Input tidak valid", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
